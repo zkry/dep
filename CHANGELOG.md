@@ -5,6 +5,10 @@ BUG FIXES:
 * Releases targeting Windows now have a `.exe` suffix (#1291).
 * Adaptively recover from dirty and corrupted git repositories in cache (#1279).
 
+WIP:
+
+* dep: Enable importing external configuration from dependencies during init (#1277)
+
 IMPROVEMENTS:
 
 * Log as dependencies are pre-fetched during dep init ([#1176](https://github.com/golang/dep/pull/1176)).
@@ -51,7 +55,6 @@ WIP:
 
 * gps: Process canonical import paths. (#1017)
 * gps: Persistent cache. (#1127, #1215)
-
 
 # v0.3.1
 
