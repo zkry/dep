@@ -875,6 +875,11 @@ func validateUpdateArgs(ctx *dep.Ctx, args []string, p *dep.Project, sm gps.Sour
 				return
 			}
 
+			if rev, ok := params.Manifest.DependencyConstraints()[pc.Ident.ProjectRoot].Constraint.(gps.Revision); ok {
+				fmt.Println("ERROR here")
+				errCh <- errors.Errorf("cannot upgrade %s which was constrained with revision %s", pc.Ident.ProjectRoot, rev)
+			}
+
 			// Valid argument.
 			argsCh <- arg
 		}(arg)
